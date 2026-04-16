@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="512" height="512">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256" y1="512" x2="256" y2="0">
+	<stop offset="0" style="stop-color:#00B59C"/>
+	<stop offset="1" style="stop-color:#9CFFAC"/>
+</linearGradient>
+<path style="fill:none;stroke:url(#SVGID_1_);stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="&#10;&#9;M256,335L256,335c-55.229,0-100-44.771-100-100V115c0-55.228,44.771-100,100-100h0c55.228,0,100,44.771,100,100v120&#10;&#9;C356,290.229,311.229,335,256,335z M306,175h50 M156,175h50 M355.495,105H306 M306,245h49.495 M156.505,105H206 M156.505,245H206&#10;&#9; M96,235c0,88.366,71.634,160,160,160s160-71.634,160-160 M256,395v102 M186,497h140"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>

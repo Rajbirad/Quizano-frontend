@@ -1,0 +1,109 @@
+.mindmap-container {
+  position: relative;
+  padding: 2rem;
+  min-height: 600px;
+}
+
+/* Modern style */
+.mindmap-modern {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Hand-drawn style */
+.mindmap-node {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.mindmap-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.mindmap-node:hover {
+  transform: scale(1.05);
+}
+
+/* Node colors */
+.mindmap-node.purple {
+  background-color: #e9d5ff;
+  color: #581c87;
+}
+
+.mindmap-node.pink {
+  background-color: #fce7f3;
+  color: #831843;
+}
+
+.mindmap-node.green {
+  background-color: #dcfce7;
+  color: #14532d;
+}
+
+.mindmap-node.blue {
+  background-color: #dbeafe;
+  color: #1e3a8a;
+}
+
+/* Connectors */
+.mindmap-connector {
+  position: absolute;
+  height: 2px;
+  background: #94a3b8;
+  transform-origin: left center;
+}
+
+.mindmap-connector::after {
+  content: '';
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+/* Zoom controls */
+.zoom-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Content styles */
+.content-list {
+  text-align: left;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.content-item {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

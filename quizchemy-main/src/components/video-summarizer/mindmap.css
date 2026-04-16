@@ -1,0 +1,47 @@
+/* Mindmap specific styles */
+.mindmap-root-node {
+  circle {
+    fill: theme('colors.primary.DEFAULT');
+    stroke: theme('colors.primary.DEFAULT');
+    stroke-width: 2;
+  }
+  
+  text {
+    fill: theme('colors.foreground');
+    font-weight: 600;
+    font-size: 14px;
+  }
+}
+
+.mindmap-branch-node {
+  circle {
+    fill: theme('colors.secondary.DEFAULT');
+    stroke: theme('colors.secondary.DEFAULT');
+    stroke-width: 2;
+  }
+  
+  text {
+    fill: theme('colors.foreground');
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+
+.mindmap-leaf-node {
+  circle {
+    fill: theme('colors.muted.DEFAULT');
+    stroke: theme('colors.muted.DEFAULT');
+    stroke-width: 1;
+  }
+  
+  text {
+    fill: theme('colors.muted.foreground');
+    font-size: 11px;
+  }
+}
+
+/* Path styles */
+.rd3t-link {
+  stroke: theme('colors.border');
+  stroke-width: 1.5;
+}

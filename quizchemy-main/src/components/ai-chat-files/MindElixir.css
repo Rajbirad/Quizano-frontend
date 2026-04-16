@@ -1,0 +1,40 @@
+/* container must strictly confine the svg/canvas */
+.mind-elixir-container {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* scopes for map and svg */
+.mind-elixir-container .map {
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+/* ensure svg doesn't overflow */
+.mind-elixir-container svg {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* wrap long text inside node topic */
+.mind-elixir-container .topic {
+  white-space: normal !important;
+  word-break: break-word !important;
+  max-width: 220px;
+  text-align: center;
+  line-height: 1.3;
+  padding: 4px 6px;
+}
+
+/* root node tweak */
+.mind-elixir-container .root .topic {
+  max-width: 300px !important;
+  font-weight: 700 !important;
+  background: #4f46e5 !important;
+  color: #fff !important;
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+}

@@ -1,0 +1,17 @@
+/* Ultra-thin custom scrollbar for DocumentAnalysis */
+.ultra-thin-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db #ffffff;
+}
+
+.ultra-thin-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.ultra-thin-scrollbar::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+.ultra-thin-scrollbar::-webkit-scrollbar-track {
+  background: #ffffff;
+}

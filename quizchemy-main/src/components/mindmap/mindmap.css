@@ -1,0 +1,34 @@
+.mindmap-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mindmap-node {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.mindmap-connector {
+  height: 3px;
+  transform-origin: left center;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.zoom-controls {
+  display: none !important;
+}
+
+.mindmap-outer {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.mindmap-branch {
+  border: none !important;
+  box-shadow: none !important;
+}

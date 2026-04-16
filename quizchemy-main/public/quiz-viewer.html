@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Viewer</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .question {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        .option {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .option:hover {
+            background-color: #f7fafc;
+        }
+        .explanation {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-radius: 4px;
+        }
+        #quiz-title {
+            text-align: center;
+            color: #1a365d;
+            margin-bottom: 2rem;
+        }
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e2e8f0;
+        }
+        .progress-bar {
+            height: 100%;
+            background: #4299e1;
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+    <h1 id="quiz-title">Loading Quiz...</h1>
+    <div id="quiz-container"></div>
+
+    <script>
+        const quizId = window.location.pathname.split('/').pop();
+        
+        async function loadQuiz() {
+            try {
+                const API_URL = window.API_URL || 'https://127.0.0.1:8000';
+                const response = await fetch(`${API_URL}/api/quiz/shared/${quizId}`);
+                if (!response.ok) throw new Error('Quiz not found');
+                
+                const data = await response.json();
+                if (!data.success) throw new Error(data.message || 'Failed to load quiz');
+
+                const quiz = data.quiz;
+                document.title = `Quiz: ${quiz.title}`;
+                document.getElementById('quiz-title').textContent = quiz.title;
+
+                const container = document.getElementById('quiz-container');
+                quiz.questions.forEach((q, index) => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.className = 'question';
+                    questionDiv.innerHTML = `
+                        <h3>${index + 1}. ${q.question}</h3>
+                        <ul class="options">
+                            ${Array.isArray(q.options) ? 
+                                q.options.map((opt, i) => `
+                                    <li class="option" data-index="${i}">
+                                        ${typeof opt === 'string' ? opt : opt.text}
+                                    </li>
+                                `).join('') : ''}
+                        </ul>
+                        <div class="explanation">
+                            <strong>Explanation:</strong> ${q.explanation || 'No explanation provided.'}
+                        </div>
+                    `;
+                    container.appendChild(questionDiv);
+                });
+
+                // Update progress bar
+                const progress = document.getElementById('progress');
+                progress.style.width = '100%';
+
+            } catch (error) {
+                console.error('Error loading quiz:', error);
+                document.getElementById('quiz-title').textContent = 'Quiz not found or no longer available';
+            }
+        }
+
+        loadQuiz();
+    </script>
+</body>
+</html>

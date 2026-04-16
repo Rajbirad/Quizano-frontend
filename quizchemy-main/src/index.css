@@ -1,0 +1,769 @@
+@import "./styles/animations.css";
+
+/* Particle Animations */
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: rgba(var(--particle-color), 0.8);
+  border-radius: 50%;
+  animation: particleAnimation 0.8s ease-out forwards;
+  opacity: 0;
+  transform-origin: center;
+}
+
+@keyframes particleAnimation {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--tx), var(--ty)) rotate(var(--rot)) scale(0);
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .flashcard {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .flashcard.flipped {
+    transform: rotateY(180deg);
+  }
+
+  .flashcard-front,
+  .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .flashcard-back {
+    transform: rotateY(180deg);
+  }
+}
+
+@layer utilities {
+  /* Utility to hide scrollbars while preserving scroll functionality */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+  .thin-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(156, 163, 175, 0.25) transparent;
+  }
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(156, 163, 175, 0.3);
+    border-radius: 9999px;
+  }
+
+  .ai-polish-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #9ca3af transparent;
+  }
+  .ai-polish-scroll::-webkit-scrollbar {
+    width: 3px;
+  }
+  .ai-polish-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .ai-polish-scroll::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+    border-radius: 9999px;
+  }
+  .ai-polish-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #6b7280;
+  }
+}
+
+@layer base {
+  :root {
+    /* AI Slides elevate system variables */
+    --button-outline: rgba(0,0,0, .10);
+    --badge-outline: rgba(0,0,0, .05);
+    --opaque-button-border-intensity: -8;
+    --elevate-1: rgba(0,0,0, .03);
+    --elevate-2: rgba(0,0,0, .08);
+    
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 75%;
+    --input: 214.3 31.8% 80%;
+
+    /* Violet gradient primary colors */
+    --primary: 250 95% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Purple secondary color */
+    --secondary: 270 85% 85%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Violet accent color */
+    --accent: 270 80% 90%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 222.2 47.4% 11.2%;
+
+    --radius: 0.5rem;
+
+    /* Flashcard type colors */
+    --flashcard-fact: 180 75% 60%;
+    --flashcard-concept: 280 70% 65%;
+    --flashcard-definition: 140 70% 60%;
+    --flashcard-problem: 35 90% 65%;
+
+    /* Sidebar colors */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 240 5% 64.9%;
+  }
+
+  .dark {
+    /* AI Slides elevate system variables for dark mode */
+    --button-outline: rgba(255,255,255, .10);
+    --badge-outline: rgba(255,255,255, .05);
+    --opaque-button-border-intensity: 9;
+    --elevate-1: rgba(255,255,255, .04);
+    --elevate-2: rgba(255,255,255, .09);
+    
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    /* Updated dark mode colors to be more vibrant */
+    --primary: 250 70% 75%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 30%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 270 60% 40%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 217.2 32.6% 17.5%;
+
+    --radius: 0.5rem;
+
+    /* Dark mode flashcard type colors */
+    --flashcard-fact: 180 60% 40%;
+    --flashcard-concept: 280 60% 45%;
+    --flashcard-definition: 140 50% 40%;
+    --flashcard-problem: 35 80% 45%;
+
+    /* Dark mode sidebar colors */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 0 0% 98%;
+    --sidebar-primary-foreground: 240 5.9% 10%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 240 4.9% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+
+  /* Remove default browser focus outline and replace with consistent focus styles */
+  input:focus,
+  textarea:focus,
+  select:focus,
+  button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Custom focus styles for form elements */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  textarea:focus {
+    @apply ring-1 ring-primary/20 border-primary/30;
+  }
+}
+
+@layer components {
+  .gradient-button {
+    @apply relative inline-flex items-center justify-center px-5 py-2.5 overflow-hidden font-medium rounded-lg bg-gradient-to-br from-primary to-secondary hover:from-secondary hover:to-primary text-white dark:text-slate-900;
+  }
+
+  .gradient-button:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background: theme('colors.primary');
+    /* background: #fff; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+
+  .gradient-button:hover:before {
+    height: 380%;
+  }
+
+  .figma-card {
+    @apply bg-white/60 dark:bg-slate-900/60 backdrop-blur-sm overflow-hidden rounded-xl border border-white/20 dark:border-white/10 shadow-lg p-6 transition-all duration-300 hover:shadow-xl;
+  }
+
+  /* Flashcard type styling */
+  .flashcard-fact {
+    @apply border-2 border-[hsl(var(--flashcard-fact))];
+  }
+  
+  .flashcard-concept {
+    @apply border-2 border-[hsl(var(--flashcard-concept))];
+  }
+  
+  .flashcard-definition {
+    @apply border-2 border-[hsl(var(--flashcard-definition))];
+  }
+  
+  .flashcard-problem {
+    @apply border-2 border-[hsl(var(--flashcard-problem))];
+  }
+
+  .flashcard-tag {
+    @apply text-xs px-2 py-1 rounded-full font-medium;
+  }
+
+  .tag-fact {
+    @apply bg-[hsl(var(--flashcard-fact))] text-white;
+  }
+  
+  .tag-concept {
+    @apply bg-[hsl(var(--flashcard-concept))] text-white;
+  }
+  
+  .tag-definition {
+    @apply bg-[hsl(var(--flashcard-definition))] text-white;
+  }
+  
+  .tag-problem {
+    @apply bg-[hsl(var(--flashcard-problem))] text-white;
+  }
+  
+  /* Flashcard 3D effect */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .flashcard {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flashcard.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .flashcard-front,
+  .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+  
+  .flashcard-back {
+    transform: rotateY(180deg);
+  }
+  
+  /* Particle animation for flashcard flip */
+  .particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(var(--particle-color), 0.8);
+    box-shadow: 0 0 10px rgba(var(--particle-color), 0.5);
+    animation: particle-animation 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    z-index: 20;
+    pointer-events: none;
+  }
+  
+  @keyframes particle-animation {
+    0% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.3) translate(var(--tx), var(--ty)) rotate(var(--rot));
+    }
+  }
+
+  .glass-panel {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg border border-white/20 dark:border-white/10 rounded-xl;
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+  }
+  
+  /* Card with highlighted border */
+  .border-card {
+    @apply border-2 border-primary/20 hover:border-primary/50 transition-colors rounded-xl p-4;
+  }
+  
+  /* Modern tab style */
+  .modern-tabs .modern-tab {
+    @apply rounded-full px-4 py-2 transition-all;
+  }
+  
+  .modern-tabs .modern-tab[data-state="active"] {
+    @apply bg-primary text-primary-foreground;
+  }
+  
+  /* Enhanced input field */
+  .enhanced-input {
+    @apply border-2 border-primary/20 focus:border-primary/60 rounded-lg px-4 py-2 transition-colors;
+  }
+}
+
+.glass-panel {
+  @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-lg;
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+}
+
+/* Gradient text effect */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80;
+}
+
+/* Disable page transitions for clean navigation */
+body, #root, main, .container {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* Content Editor Styles for proper formatting display */
+.content-editor {
+  color: #1c1c1c !important;
+}
+
+.content-editor *,
+.content-editor p,
+.content-editor span,
+.content-editor div {
+  color: #1c1c1c !important;
+}
+
+/* Override any prose plugin colors */
+div.content-editor {
+  color: #1c1c1c !important;
+}
+
+div[contenteditable="true"].content-editor {
+  color: #1c1c1c !important;
+}
+
+.content-editor ol,
+.content-editor ul {
+  padding-left: 1.5rem !important;
+  margin: 0.5rem 0 !important;
+  list-style-position: outside !important;
+}
+
+.content-editor ol {
+  list-style-type: decimal !important;
+}
+
+.content-editor ul {
+  list-style-type: disc !important;
+}
+
+.content-editor li {
+  display: list-item !important;
+  margin: 0.25rem 0 !important;
+}
+
+.content-editor .highlight {
+  background-color: #ffeb3b !important;
+  padding: 2px 4px !important;
+  border-radius: 3px !important;
+  color: #000 !important;
+}
+
+.content-editor strong,
+.content-editor b {
+  font-weight: 700 !important;
+}
+
+.content-editor em,
+.content-editor i {
+  font-style: italic !important;
+}
+
+.content-editor u {
+  text-decoration: underline !important;
+}
+
+/* Notion-like numbered and bullet lists for MarkdownViewer */
+.numbered-list {
+  counter-reset: list-counter;
+}
+
+.numbered-list .list-item-custom {
+  counter-increment: list-counter;
+}
+
+.numbered-list .list-marker:before {
+  content: counter(list-counter);
+  font-weight: 600;
+}
+
+.prose ul .list-item-custom .list-marker {
+  width: 8px !important;
+  height: 8px !important;
+  background: rgb(var(--primary)) !important;
+  border-radius: 50% !important;
+  margin-top: 10px !important;
+}
+
+.prose ul .list-item-custom .list-marker:before {
+  content: '' !important;
+}
+
+/* Enhanced prose styling for better text rendering */
+.prose {
+  color: rgb(var(--foreground));
+}
+
+.prose strong,
+.prose b {
+  font-weight: 700 !important;
+  color: rgb(var(--foreground)) !important;
+}
+
+.prose em,
+.prose i {
+  font-style: italic !important;
+  color: rgba(var(--foreground), 0.9) !important;
+}
+
+.prose p {
+  margin-bottom: 1rem !important;
+  line-height: 1.75 !important;
+}
+
+.prose ul,
+.prose ol {
+  margin: 1rem 0 !important;
+  padding-left: 0 !important;
+}
+
+.prose li {
+  margin: 0.5rem 0 !important;
+}
+
+/* Enhanced formatting for blockquotes in image text results */
+.prose blockquote {
+  background: rgba(var(--accent), 0.1) !important;
+  margin: 1rem 0 !important;
+  padding: 1rem !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Force remove any blue borders from prose content */
+.prose blockquote,
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  border-left: none !important;
+  border: none !important;
+}
+
+/* Better styling for inline code */
+.prose code {
+  background: rgba(var(--muted), 0.8) !important;
+  padding: 0.125rem 0.375rem !important;
+  border-radius: 0.25rem !important;
+  font-size: 0.875em !important;
+}
+
+/* Improved table styling */
+.prose table {
+  border-collapse: collapse !important;
+  margin: 1rem 0 !important;
+}
+
+.prose th,
+.prose td {
+  border: 1px solid rgba(var(--border), 0.3) !important;
+  padding: 0.5rem !important;
+}
+
+.prose th {
+  background: rgba(var(--muted), 0.8) !important;
+  font-weight: 600 !important;
+}
+
+/* Flashcard editor placeholder styling */
+[contenteditable][data-placeholder]:empty:before {
+  content: attr(data-placeholder);
+  color: hsl(var(--muted-foreground));
+  pointer-events: none;
+  font-style: italic;
+  direction: ltr;
+  text-align: left;
+}
+
+[contenteditable]:focus {
+  outline: none;
+}
+
+/* Ensure proper text color and direction in flashcard editor */
+[contenteditable] {
+  color: #1c1c1c !important;
+  direction: ltr !important;
+  text-align: left !important;
+  unicode-bidi: normal !important;
+  writing-mode: horizontal-tb !important;
+}
+
+/* Force proper text direction on all child elements */
+[contenteditable] * {
+  direction: ltr !important;
+  text-align: inherit !important;
+  unicode-bidi: normal !important;
+}
+
+/* Ensure typing starts from left */
+[contenteditable]:focus {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* Force cursor behavior */
+[contenteditable]:before,
+[contenteditable]:after {
+  direction: ltr !important;
+}
+
+/* Ensure formatting works properly */
+[contenteditable] strong,
+[contenteditable] b {
+  font-weight: bold !important;
+}
+
+[contenteditable] em,
+[contenteditable] i {
+  font-style: italic !important;
+}
+
+[contenteditable] u {
+  text-decoration: underline !important;
+}
+
+[contenteditable] strike,
+[contenteditable] s {
+  text-decoration: line-through !important;
+}
+
+[contenteditable] ul,
+[contenteditable] ol {
+  margin: 8px 0 !important;
+  padding-left: 20px !important;
+  list-style-position: outside !important;
+}
+
+[contenteditable] ul {
+  list-style-type: disc !important;
+}
+
+[contenteditable] ol {
+  list-style-type: decimal !important;
+}
+
+[contenteditable] li {
+  margin: 4px 0 !important;
+  display: list-item !important;
+  padding-left: 0 !important;
+}
+
+/* Ensure list items maintain proper direction */
+[contenteditable] ul li,
+[contenteditable] ol li {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+/* AI Slides - Elevate System Utilities */
+@layer utilities {
+  /* Hide ugly search cancel button in Chrome until we can style it properly */
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  /* Placeholder styling for contentEditable div */
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  /* .no-default-hover-elevate/no-default-active-elevate is an escape hatch so consumers of
+   * buttons/badges can remove the automatic brightness adjustment on interactions
+   * and program their own. */
+  .no-default-hover-elevate {}
+
+  .no-default-active-elevate {}
+
+  /**
+   * Toggleable backgrounds go behind the content. Hoverable/active goes on top.
+   * This way they can stack/compound. Both will overlap the parent's borders!
+   * So borders will be automatically adjusted both on toggle, and hover/active,
+   * and they will be compounded.
+   */
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  /* If there's a 1px border, adjust the inset so that it covers that parent's border */
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  /* Does not work on elements with overflow:hidden! */
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  /* If there's a 1px border, adjust the inset so that it covers that parent's border */
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after {
+    inset: -1px;
+  }
+}

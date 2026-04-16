@@ -1,0 +1,702 @@
+{
+    "task_id": "fbb0508b-5f3c-4a24-8147-f9946dee3329",
+    "status": "completed",
+    "success": true,
+    "version": "1.0",
+    "language": "English",
+    "word_count": 283,
+    "sentence_count": 13,
+    "error_count": 13,
+    "correction_count": 61,
+    "sentences": [
+        {
+            "sentence_index": 1,
+            "start": 0,
+            "end": 164,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.88,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 12,
+                    "end": 16,
+                    "original": "goes",
+                    "replacement": "went",
+                    "type": "tense",
+                    "reason_code": "VERB_TENSE"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 37,
+                    "end": 41,
+                    "original": "seen",
+                    "replacement": "saw",
+                    "type": "tense",
+                    "reason_code": "VERB_TENSE"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 47,
+                    "end": 54,
+                    "original": "peoples",
+                    "replacement": "people",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 76,
+                    "end": 92,
+                    "original": "vegetables price",
+                    "replacement": "vegetable prices,",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 103,
+                    "end": 107,
+                    "original": "",
+                    "replacement": "a very",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                }
+            ]
+        },
+        {
+            "sentence_index": 2,
+            "start": 165,
+            "end": 316,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.86,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 180,
+                    "end": 183,
+                    "original": "say",
+                    "replacement": "says",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 202,
+                    "end": 204,
+                    "original": "is",
+                    "replacement": "are",
+                    "type": "tense",
+                    "reason_code": "VERB_TENSE"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 211,
+                    "end": 214,
+                    "original": "",
+                    "replacement": ", but",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 229,
+                    "end": 243,
+                    "original": "don t believes",
+                    "replacement": "don’t believe",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 252,
+                    "end": 257,
+                    "original": "keeps",
+                    "replacement": "keep",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_6",
+                    "start": 265,
+                    "end": 273,
+                    "original": "",
+                    "replacement": "for a discount",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_7",
+                    "start": 290,
+                    "end": 295,
+                    "original": "",
+                    "replacement": ", which",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                }
+            ]
+        },
+        {
+            "sentence_index": 3,
+            "start": 317,
+            "end": 436,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.89,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 319,
+                    "end": 324,
+                    "original": "don t",
+                    "replacement": "don’t",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 340,
+                    "end": 355,
+                    "original": "peoples behaves",
+                    "replacement": "people behave",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 379,
+                    "end": 382,
+                    "original": "for",
+                    "replacement": "",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 391,
+                    "end": 397,
+                    "original": ", it s",
+                    "replacement": "; it’s",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                }
+            ]
+        },
+        {
+            "sentence_index": 4,
+            "start": 437,
+            "end": 552,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.86,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 443,
+                    "end": 451,
+                    "original": "sometime",
+                    "replacement": "some time,",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 454,
+                    "end": 458,
+                    "original": "walk",
+                    "replacement": "walked",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 506,
+                    "end": 509,
+                    "original": "",
+                    "replacement": ", and",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 514,
+                    "end": 517,
+                    "original": "ask",
+                    "replacement": "asked",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 521,
+                    "end": 525,
+                    "original": "that",
+                    "replacement": "",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_6",
+                    "start": 539,
+                    "end": 543,
+                    "original": "more",
+                    "replacement": "",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_7",
+                    "start": 551,
+                    "end": 552,
+                    "original": "?",
+                    "replacement": ".",
+                    "type": "punctuation",
+                    "reason_code": "PUNCTUATION"
+                }
+            ]
+        },
+        {
+            "sentence_index": 5,
+            "start": 553,
+            "end": 633,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.9,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 553,
+                    "end": 556,
+                    "original": "and",
+                    "replacement": "",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 603,
+                    "end": 606,
+                    "original": "",
+                    "replacement": ", but",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 615,
+                    "end": 620,
+                    "original": "tries",
+                    "replacement": "tried",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                }
+            ]
+        },
+        {
+            "sentence_index": 6,
+            "start": 634,
+            "end": 747,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.9,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 638,
+                    "end": 644,
+                    "original": "thanks",
+                    "replacement": "thanked",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 678,
+                    "end": 682,
+                    "original": "help",
+                    "replacement": "helps",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 693,
+                    "end": 698,
+                    "original": "",
+                    "replacement": ", which",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                }
+            ]
+        },
+        {
+            "sentence_index": 7,
+            "start": 748,
+            "end": 924,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.86,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 765,
+                    "end": 770,
+                    "original": "start",
+                    "replacement": "started",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 800,
+                    "end": 803,
+                    "original": "run",
+                    "replacement": "ran",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 834,
+                    "end": 840,
+                    "original": ", some",
+                    "replacement": ". Some",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 848,
+                    "end": 851,
+                    "original": "was",
+                    "replacement": "were",
+                    "type": "tense",
+                    "reason_code": "VERB_TENSE"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 877,
+                    "end": 880,
+                    "original": "",
+                    "replacement": "a few",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_6",
+                    "start": 894,
+                    "end": 898,
+                    "original": "fall",
+                    "replacement": "fell",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_7",
+                    "start": 904,
+                    "end": 909,
+                    "original": "",
+                    "replacement": ", which",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                }
+            ]
+        },
+        {
+            "sentence_index": 8,
+            "start": 925,
+            "end": 1040,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.88,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 932,
+                    "end": 938,
+                    "original": "forget",
+                    "replacement": "forgot",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 951,
+                    "end": 953,
+                    "original": "",
+                    "replacement": ", so",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 990,
+                    "end": 993,
+                    "original": "was",
+                    "replacement": "were",
+                    "type": "tense",
+                    "reason_code": "VERB_TENSE"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 1014,
+                    "end": 1019,
+                    "original": "",
+                    "replacement": ", which",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 1020,
+                    "end": 1025,
+                    "original": "feels",
+                    "replacement": "felt",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                }
+            ]
+        },
+        {
+            "sentence_index": 9,
+            "start": 1041,
+            "end": 1172,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.86,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 1048,
+                    "end": 1053,
+                    "original": "reach",
+                    "replacement": "reached",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 1059,
+                    "end": 1060,
+                    "original": "",
+                    "replacement": ", I",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 1061,
+                    "end": 1068,
+                    "original": "realize",
+                    "replacement": "realized",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 1076,
+                    "end": 1087,
+                    "original": "have forgot",
+                    "replacement": "had forgotten",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 1131,
+                    "end": 1136,
+                    "original": "",
+                    "replacement": ", which",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_6",
+                    "start": 1137,
+                    "end": 1140,
+                    "original": "was",
+                    "replacement": "were",
+                    "type": "tense",
+                    "reason_code": "VERB_TENSE"
+                },
+                {
+                    "id": "corr_7",
+                    "start": 1150,
+                    "end": 1156,
+                    "original": "reason",
+                    "replacement": "reasons",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                }
+            ]
+        },
+        {
+            "sentence_index": 10,
+            "start": 1173,
+            "end": 1238,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.91,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 1194,
+                    "end": 1196,
+                    "original": "on",
+                    "replacement": "with",
+                    "type": "preposition",
+                    "reason_code": "PREPOSITION"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 1204,
+                    "end": 1207,
+                    "original": "say",
+                    "replacement": "says",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                }
+            ]
+        },
+        {
+            "sentence_index": 11,
+            "start": 1239,
+            "end": 1282,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.9,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 1241,
+                    "end": 1246,
+                    "original": "tries",
+                    "replacement": "try",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 1258,
+                    "end": 1261,
+                    "original": "",
+                    "replacement": ", but",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 1266,
+                    "end": 1281,
+                    "original": "doesn t listens",
+                    "replacement": "doesn’t listen",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                }
+            ]
+        },
+        {
+            "sentence_index": 12,
+            "start": 1283,
+            "end": 1410,
+            "has_error": true,
+            "error_type": "grammar",
+            "confidence": 0.87,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 1289,
+                    "end": 1290,
+                    "original": "",
+                    "replacement": ", I",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 1312,
+                    "end": 1317,
+                    "original": "which",
+                    "replacement": "that",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                },
+                {
+                    "id": "corr_3",
+                    "start": 1320,
+                    "end": 1327,
+                    "original": "",
+                    "replacement": "had already",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_4",
+                    "start": 1340,
+                    "end": 1343,
+                    "original": "",
+                    "replacement": ", but",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_5",
+                    "start": 1352,
+                    "end": 1359,
+                    "original": "watches",
+                    "replacement": "watched",
+                    "type": "plural",
+                    "reason_code": "PLURAL"
+                },
+                {
+                    "id": "corr_6",
+                    "start": 1379,
+                    "end": 1389,
+                    "original": "didn t had",
+                    "replacement": "didn’t have",
+                    "type": "grammar",
+                    "reason_code": "GRAMMAR"
+                }
+            ]
+        },
+        {
+            "sentence_index": 13,
+            "start": 1411,
+            "end": 1507,
+            "has_error": true,
+            "error_type": "punctuation",
+            "confidence": 0.95,
+            "corrections": [
+                {
+                    "id": "corr_1",
+                    "start": 1442,
+                    "end": 1445,
+                    "original": "",
+                    "replacement": ", and",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                },
+                {
+                    "id": "corr_2",
+                    "start": 1460,
+                    "end": 1463,
+                    "original": "",
+                    "replacement": ", but",
+                    "type": "article",
+                    "reason_code": "ARTICLE"
+                }
+            ]
+        }
+    ],
+    "message": "Grammar check completed successfully",
+    "processing_time": 12.04,
+    "correlation_id": "8427acac-03ac-48d0-9124-a8c44c6b14f2",
+    "cached": false,
+    "credits": {
+        "cost": 5,
+        "balance": 115,
+        "unlimited": false,
+        "transaction_id": null
+    }
+}
