@@ -15,7 +15,7 @@ const Blog = () => {
       date: "2024-01-15",
       readTime: "5 min read",
       category: "AI Learning",
-      image: "/lovable-uploads/04cb5454-40b4-428f-8e28-a83115ff83d8.png"
+      image: "/images/blog-image-1.png"
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const Blog = () => {
       date: "2024-01-12",
       readTime: "7 min read",
       category: "Learning Science",
-      image: "/lovable-uploads/529c4dc9-c48f-4491-8077-c01c1ed79467.png"
+      image: "/images/blog-image-2.png"
     },
     {
       id: 3,
@@ -112,7 +112,7 @@ const Blog = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = '/lovable-uploads/04cb5454-40b4-428f-8e28-a83115ff83d8.png';
+                      target.src = '/images/blog-image-1.png';
                     }}
                   />
                 </div>

@@ -163,7 +163,7 @@ const Features = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
-                      target.src = '/lovable-uploads/04cb5454-40b4-428f-8e28-a83115ff83d8.png';
+                      target.src = '/images/blog-image-1.png';
                     }}
                   />
                 </div>

@@ -21,7 +21,7 @@ const UseCases = () => {
       icon: GraduationCap,
       title: "Students & Academics",
       description: "From high school to PhD level, streamline your study process and boost academic performance.",
-      image: "/lovable-uploads/04cb5454-40b4-428f-8e28-a83115ff83d8.png",
+      image: "/images/blog-image-1.png",
       features: [
         "Lecture note conversion to flashcards",
         "Exam preparation with AI quizzes",
@@ -34,7 +34,7 @@ const UseCases = () => {
       icon: Briefcase,
       title: "Professional Development",
       description: "Stay ahead in your career with continuous learning and skill development tools.",
-      image: "/lovable-uploads/529c4dc9-c48f-4491-8077-c01c1ed79467.png",
+      image: "/images/blog-image-2.png",
       features: [
         "Industry certification prep",
         "Training material creation",
@@ -102,19 +102,19 @@ const UseCases = () => {
       name: "Sarah Chen",
       role: "Medical Student",
       content: "Quizano helped me reduce study time by 40% while improving my exam scores. The AI-generated flashcards are incredibly accurate.",
-      avatar: "/lovable-uploads/ed5795cf-29b1-4855-86fb-d8df36c569dc.png"
+      avatar: "/images/google-logo.png"
     },
     {
       name: "Marcus Johnson",
       role: "Software Engineer",
       content: "Perfect for staying updated with new technologies. I use it to create quick study materials from documentation and tutorials.",
-      avatar: "/lovable-uploads/04cb5454-40b4-428f-8e28-a83115ff83d8.png"
+      avatar: "/images/blog-image-1.png"
     },
     {
       name: "Dr. Emily Rodriguez",
       role: "Corporate Trainer",
       content: "We've transformed our training programs using Quizano. Employee engagement and knowledge retention have significantly improved.",
-      avatar: "/lovable-uploads/529c4dc9-c48f-4491-8077-c01c1ed79467.png"
+      avatar: "/images/blog-image-2.png"
     }
   ];
 
@@ -181,7 +181,7 @@ const UseCases = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
-                        target.src = '/lovable-uploads/04cb5454-40b4-428f-8e28-a83115ff83d8.png';
+                        target.src = '/images/blog-image-1.png';
                       }}
                     />
                   </div>
@@ -252,7 +252,7 @@ const UseCases = () => {
                         className="w-10 h-10 rounded-full mr-3"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = '/lovable-uploads/ed5795cf-29b1-4855-86fb-d8df36c569dc.png';
+                          target.src = '/images/google-logo.png';
                         }}
                       />
                       <div>
